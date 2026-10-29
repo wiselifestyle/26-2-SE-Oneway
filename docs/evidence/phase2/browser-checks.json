@@ -1,0 +1,507 @@
+{
+  "date": "2026-10-30",
+  "environment": "Windows / Codex in-app browser / Vite dev",
+  "notes": [
+    "가상 인물 응답만 사용",
+    "후보 검사에서는 heading level 필터 미지원으로 h3 DOM 선택자로 수정해 재검증",
+    "radio checked HTML 속성 대신 현재 checked DOM 속성으로 검사 정정"
+  ],
+  "checks": [
+    {
+      "test": "home-empty",
+      "pass": true
+    },
+    {
+      "test": "consent-required",
+      "pass": true
+    },
+    {
+      "test": "required-missing",
+      "pass": true
+    },
+    {
+      "test": "normal-submit",
+      "pass": true,
+      "pendingVisible": true
+    },
+    {
+      "test": "unknown-no-zero",
+      "pass": true
+    },
+    {
+      "test": "advice-linked",
+      "pass": true
+    },
+    {
+      "test": "recommendation-order",
+      "pass": true
+    },
+    {
+      "test": "phase4-boundary",
+      "pass": true
+    },
+    {
+      "test": "home-result-summary",
+      "pass": true
+    },
+    {
+      "test": "edit-invalidates-home",
+      "pass": true
+    },
+    {
+      "test": "stale-id-invalidated",
+      "pass": true
+    },
+    {
+      "test": "new-result-id",
+      "pass": true
+    },
+    {
+      "test": "updated-recommendation",
+      "pass": true
+    },
+    {
+      "test": "no-concern-general-info",
+      "pass": true
+    },
+    {
+      "test": "all-unknown",
+      "pass": true
+    },
+    {
+      "test": "all-unknown-no-recommendation",
+      "pass": true
+    },
+    {
+      "test": "failed-no-result",
+      "pass": true
+    },
+    {
+      "test": "failed-retry",
+      "pass": true
+    },
+    {
+      "test": "low-confidence-no-result",
+      "pass": true
+    },
+    {
+      "test": "low-confidence-retry",
+      "pass": true
+    },
+    {
+      "test": "partial-result",
+      "pass": true
+    },
+    {
+      "test": "advice-failed-retains-items",
+      "pass": true
+    },
+    {
+      "test": "advice-failed-no-recommendations",
+      "pass": true
+    },
+    {
+      "test": "advice-retry",
+      "pass": true
+    },
+    {
+      "test": "withdraw-clears-input",
+      "pass": true
+    },
+    {
+      "test": "pending-withdraw",
+      "pass": true,
+      "cancelledPath": "http://127.0.0.1:5173/assessment"
+    },
+    {
+      "test": "candidate-a-d-tie",
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "viewport": 320,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "result",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "viewport": 320,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "advice",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "viewport": 320,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "recommendations",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "viewport": 320,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "survey",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "viewport": 320,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "viewport": 360,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "result",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "viewport": 360,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "advice",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "viewport": 360,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "recommendations",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "viewport": 360,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "survey",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "viewport": 360,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "viewport": 390,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "result",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "viewport": 390,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "advice",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "viewport": 390,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "recommendations",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "viewport": 390,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "survey",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "viewport": 390,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "viewport": 430,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "result",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "viewport": 430,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "advice",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "viewport": 430,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "recommendations",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "viewport": 430,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "survey",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "viewport": 430,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "viewport": 1280,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "result",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "viewport": 1280,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "advice",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "viewport": 1280,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "recommendations",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "viewport": 1280,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "survey",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "viewport": 1280,
+      "width": 390
+    },
+    {
+      "test": "debug-hidden-normal",
+      "pass": true
+    },
+    {
+      "test": "keyboard-radio",
+      "pass": true
+    },
+    {
+      "test": "navigate-during-pending",
+      "pass": true
+    },
+    {
+      "test": "reload-clears-result",
+      "pass": true
+    },
+    {
+      "test": "direct-advice-empty",
+      "pass": true
+    },
+    {
+      "test": "direct-recommendation-empty",
+      "pass": true
+    },
+    {
+      "test": "reload-clears-responses",
+      "pass": true
+    },
+    {
+      "test": "pending-submit-disabled",
+      "pass": true
+    },
+    {
+      "test": "final-build-smoke",
+      "pass": true
+    }
+  ]
+}

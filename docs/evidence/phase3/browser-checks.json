@@ -1,0 +1,570 @@
+{
+  "date": "2026-10-30",
+  "environment": "Windows / Codex in-app browser / Vite dev 127.0.0.1:5173",
+  "notes": [
+    "개인 영상 대신 Canvas/MediaRecorder로 만든 합성 WebM 사용",
+    "뷰포트 검사는 세로 스크롤바를 제외한 clientWidth 기준",
+    "일부 locator 대기가 실제 1/3/10초 재시도보다 짧아 다음 도구 호출에서 실제 상태를 다시 관찰",
+    "동기화 시나리오 선택 후 새 상태를 관찰하고 실행",
+    "경로 전환 직후 이전 DOM을 집계한 검사는 화면 제목 대기 후 재검증",
+    "select의 HTML value 속성이 아닌 현재 DOM value 속성으로 복귀값 검사",
+    "편집 중 effect 의존 배열 길이 변경 HMR 경고 1회, 최종 새 페이지 warn/error 0건",
+    "최종 별도 탭 검사에서 파일 선택 대기 도구가 초기화되어 기존 로그 복원 후 명시적 새 탭으로 재검증"
+  ],
+  "checks": [
+    {
+      "test": "initial-disconnected-empty",
+      "pass": true
+    },
+    {
+      "test": "connect-cancel",
+      "pass": true
+    },
+    {
+      "test": "connect-denied",
+      "pass": true
+    },
+    {
+      "test": "connect-timeout",
+      "pass": true
+    },
+    {
+      "test": "connect-unavailable",
+      "pass": true
+    },
+    {
+      "test": "connected-without-records",
+      "pass": true
+    },
+    {
+      "test": "empty-sync",
+      "pass": true
+    },
+    {
+      "test": "normal-sync",
+      "pass": true
+    },
+    {
+      "test": "duplicate-sync-six",
+      "pass": true
+    },
+    {
+      "test": "sync-cancel-preserves-time",
+      "pass": true
+    },
+    {
+      "test": "retry-exhausted-preserves-history",
+      "pass": true
+    },
+    {
+      "test": "invalid-payload-preserves-time",
+      "pass": true
+    },
+    {
+      "test": "transient-retry-recovered",
+      "pass": true
+    },
+    {
+      "test": "disconnect-keeps-six",
+      "pass": true
+    },
+    {
+      "test": "period-seven-filter",
+      "pass": true
+    },
+    {
+      "test": "detail-metrics-and-partial-region",
+      "pass": true
+    },
+    {
+      "test": "period-preserved-on-return",
+      "pass": true
+    },
+    {
+      "test": "session-null-metrics",
+      "pass": true
+    },
+    {
+      "test": "video-session-context",
+      "pass": true
+    },
+    {
+      "test": "video-before-consent",
+      "pass": true
+    },
+    {
+      "test": "video-consent-refused",
+      "pass": true
+    },
+    {
+      "test": "video-reject-unsupported.txt",
+      "pass": true
+    },
+    {
+      "test": "video-reject-empty.webm",
+      "pass": true
+    },
+    {
+      "test": "video-reject-oversized.webm",
+      "pass": true
+    },
+    {
+      "test": "video-reject-bad-header.mp4",
+      "pass": true
+    },
+    {
+      "test": "synthetic-video-selected",
+      "pass": true
+    },
+    {
+      "test": "video-pending-disabled",
+      "pass": true
+    },
+    {
+      "test": "video-normal-demo-result",
+      "pass": true
+    },
+    {
+      "test": "video-does-not-alter-device-metrics",
+      "pass": true
+    },
+    {
+      "test": "video-unmount-releases-input",
+      "pass": true
+    },
+    {
+      "test": "missing-session-independent-video",
+      "pass": true
+    },
+    {
+      "test": "video-failed-withheld",
+      "pass": true
+    },
+    {
+      "test": "video-failed-retry",
+      "pass": true
+    },
+    {
+      "test": "video-low-quality-withheld",
+      "pass": true
+    },
+    {
+      "test": "video-low-quality-retry",
+      "pass": true
+    },
+    {
+      "test": "video-low-confidence-withheld",
+      "pass": true
+    },
+    {
+      "test": "video-low-confidence-retry",
+      "pass": true
+    },
+    {
+      "test": "video-clear-invalidates-result",
+      "pass": true
+    },
+    {
+      "test": "video-pending-consent-withdrawal",
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "device",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "brushing",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "detail",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "video",
+      "requestedWidth": 320,
+      "pass": true,
+      "client": 305,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 304.8000183105469,
+      "scroll": 305,
+      "width": 304.8000183105469
+    },
+    {
+      "test": "video-outcome-layout",
+      "requestedWidth": 320,
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "device",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "brushing",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "detail",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "layout",
+      "page": "video",
+      "requestedWidth": 360,
+      "pass": true,
+      "client": 345,
+      "height": 800,
+      "left": 0,
+      "navBottom": 800.0000152587891,
+      "navWidth": 344.8000183105469,
+      "scroll": 345,
+      "width": 344.8000183105469
+    },
+    {
+      "test": "video-outcome-layout",
+      "requestedWidth": 360,
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "device",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "brushing",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "detail",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "video",
+      "requestedWidth": 390,
+      "pass": true,
+      "client": 375,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 375.2000122070313,
+      "scroll": 375,
+      "width": 375.2000122070313
+    },
+    {
+      "test": "video-outcome-layout",
+      "requestedWidth": 390,
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "device",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "brushing",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "detail",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "layout",
+      "page": "video",
+      "requestedWidth": 430,
+      "pass": true,
+      "client": 415,
+      "height": 844,
+      "left": 0,
+      "navBottom": 844.0000152587891,
+      "navWidth": 415.2000122070313,
+      "scroll": 415,
+      "width": 415.2000122070313
+    },
+    {
+      "test": "video-outcome-layout",
+      "requestedWidth": 430,
+      "pass": true
+    },
+    {
+      "test": "layout",
+      "page": "home",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "device",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1280,
+      "height": 900,
+      "left": 445,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1280,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "brushing",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "detail",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "width": 390
+    },
+    {
+      "test": "layout",
+      "page": "video",
+      "requestedWidth": 1280,
+      "pass": true,
+      "client": 1265,
+      "height": 900,
+      "left": 437.3999938964844,
+      "navBottom": 900.0000152587891,
+      "navWidth": 390,
+      "scroll": 1265,
+      "width": 390
+    },
+    {
+      "test": "video-outcome-layout",
+      "requestedWidth": 1280,
+      "pass": true
+    },
+    {
+      "test": "home-device-summary",
+      "pass": true
+    },
+    {
+      "test": "phase2-regression-assessment",
+      "pass": true
+    },
+    {
+      "test": "phase2-regression-recommendations",
+      "pass": true
+    },
+    {
+      "test": "assessment-does-not-change-sessions",
+      "pass": true
+    },
+    {
+      "test": "reload-clears-device-records",
+      "pass": true
+    },
+    {
+      "test": "direct-missing-session",
+      "pass": true
+    },
+    {
+      "test": "keyboard-connect-sync",
+      "pass": true
+    },
+    {
+      "test": "keyboard-period",
+      "pass": true
+    },
+    {
+      "test": "keyboard-video-consent",
+      "pass": true
+    },
+    {
+      "test": "keyboard-video-submit",
+      "pass": true
+    },
+    {
+      "test": "fresh-final-video-smoke",
+      "pass": true
+    },
+    {
+      "test": "fresh-console-clean",
+      "pass": true
+    }
+  ]
+}

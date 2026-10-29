@@ -1,0 +1,334 @@
+[
+  {
+    "id": "P4-PRODUCT-DETAIL",
+    "pass": true,
+    "actual": {
+      "href": "https://oneway.or.kr/product/%EC%86%8C%EB%AA%A8%ED%92%88-%EC%9B%90%EC%9B%A8%EC%9D%B4-%EC%B9%98%EC%95%84%EA%B4%80%EB%A6%AC%EA%B8%B0-v2-%ED%8C%81-3%EC%A2%85-%EC%84%B8%ED%8A%B8/532/category/24/display/1/",
+      "rel": "noopener noreferrer",
+      "target": "_blank"
+    }
+  },
+  {
+    "id": "P4-SHOP-ARRIVAL",
+    "pass": true,
+    "actual": "상품 링크 클릭 후 자사몰 532 상세 상품명 확인; 구매 동작 없음"
+  },
+  {
+    "id": "P4-PRODUCT-PREFILL",
+    "pass": true
+  },
+  {
+    "id": "P4-REQUIRED",
+    "pass": true
+  },
+  {
+    "id": "P4-DEMO-REQUEST",
+    "pass": true
+  },
+  {
+    "id": "P4-WITHDRAW",
+    "pass": true
+  },
+  {
+    "id": "P4-WITHDRAW-CONSENT",
+    "pass": true
+  },
+  {
+    "id": "P4-ORDER-FAIL",
+    "pass": true
+  },
+  {
+    "id": "P4-UNCONFIRMED-RETRY",
+    "pass": true
+  },
+  {
+    "id": "P4-EXISTING-INTENT",
+    "pass": true
+  },
+  {
+    "id": "P4-CANCEL",
+    "pass": true
+  },
+  {
+    "id": "P4-HOME-NO-AUTO-NAV",
+    "pass": true
+  },
+  {
+    "id": "P4-DELETE-GUARD",
+    "pass": true
+  },
+  {
+    "id": "P4-DELETE-CANCEL",
+    "pass": true
+  },
+  {
+    "id": "P4-CONSENT-WITHDRAW",
+    "pass": true
+  },
+  {
+    "id": "P4-PARTIAL-DELETE",
+    "pass": true
+  },
+  {
+    "id": "P4-DELETE-RETRY",
+    "pass": true
+  },
+  {
+    "id": "P4-DELETE-HOME",
+    "pass": true
+  },
+  {
+    "id": "P4-RECOMMENDATION",
+    "pass": true
+  },
+  {
+    "id": "P4-ASSESSMENT-WITHDRAW",
+    "pass": true
+  },
+  {
+    "id": "P4-VIDEO-CONSENT-EXIT",
+    "pass": true
+  },
+  {
+    "id": "P4-UNKNOWN-PRODUCT",
+    "pass": true
+  },
+  {
+    "id": "P4-UNKNOWN-INTENT",
+    "pass": true
+  },
+  {
+    "id": "P4-LINK-UNAVAILABLE",
+    "pass": true
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/products",
+    "pass": true,
+    "actual": {
+      "heading": "매일 쓰는 케어도구",
+      "height": 668,
+      "main": {
+        "bottom": 1195.5999755859375,
+        "height": 1127.5999755859375,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/products/tip-532",
+    "pass": true,
+    "actual": {
+      "heading": "원웨이 치아관리기 V2 팁 3종 세트",
+      "height": 668,
+      "main": {
+        "bottom": 1023.2999877929688,
+        "height": 955.2999877929688,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/subscription",
+    "pass": true,
+    "actual": {
+      "heading": "구독 구성 체험",
+      "height": 668,
+      "main": {
+        "bottom": 914.9500122070312,
+        "height": 846.9500122070312,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/settings",
+    "pass": true,
+    "actual": {
+      "heading": "설정",
+      "height": 668,
+      "main": {
+        "bottom": 699.6500244140625,
+        "height": 631.6500244140625,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/settings/privacy",
+    "pass": true,
+    "actual": {
+      "heading": "동의와 로컬 데이터",
+      "height": 668,
+      "main": {
+        "bottom": 1445.550048828125,
+        "height": 1377.550048828125,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/sales-channels",
+    "pass": true,
+    "actual": {
+      "heading": "판매 경로 안내",
+      "height": 668,
+      "main": {
+        "bottom": 659.75,
+        "height": 591.75,
+        "left": 33.79999923706055,
+        "right": 423.79999923706055,
+        "top": 68,
+        "width": 390,
+        "x": 33.79999923706055,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 33.79999923706055,
+        "right": 423.79999923706055,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 33.79999923706055,
+        "y": 595.7000122070312
+      },
+      "scroll": 458,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-OBSERVED-458-LAYOUT/recommendations",
+    "pass": true,
+    "actual": {
+      "heading": "교체용 팁 4종",
+      "height": 668,
+      "main": {
+        "bottom": 1756.050048828125,
+        "height": 1688.050048828125,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 68,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 68
+      },
+      "nav": {
+        "bottom": 668.0000152587891,
+        "height": 72.30000305175781,
+        "left": 26.200000762939453,
+        "right": 416.20000076293945,
+        "top": 595.7000122070312,
+        "width": 390,
+        "x": 26.200000762939453,
+        "y": 595.7000122070312
+      },
+      "scroll": 442,
+      "width": 458
+    }
+  },
+  {
+    "id": "P4-CATALOG-LINK/products/tip-532",
+    "pass": true,
+    "actual": "https://oneway.or.kr/product/%EC%86%8C%EB%AA%A8%ED%92%88-%EC%9B%90%EC%9B%A8%EC%9D%B4-%EC%B9%98%EC%95%84%EA%B4%80%EB%A6%AC%EA%B8%B0-v2-%ED%8C%81-3%EC%A2%85-%EC%84%B8%ED%8A%B8/532/category/24/display/1/"
+  },
+  {
+    "id": "P4-CATALOG-LINK/products/tip-518",
+    "pass": true,
+    "actual": "https://oneway.or.kr/product/%EC%86%8C%EB%AA%A8%ED%92%88-%EC%9B%90%EC%9B%A8%EC%9D%B4-%EA%B5%AC%EA%B0%95%EC%84%B8%EC%A0%95%EA%B8%B0-v4-tip-3%EC%A2%85%EC%84%B8%ED%8A%B8/518/category/24/display/1/"
+  },
+  {
+    "id": "P4-CATALOG-LINK/products/tip-364",
+    "pass": true,
+    "actual": "https://oneway.or.kr/product/%EC%86%8C%EB%AA%A8%ED%92%88-%EC%9B%90%EC%9B%A8%EC%9D%B4-%EA%B5%AC%EA%B0%95%EC%84%B8%EC%A0%95%EA%B8%B0-v3-tip-3%EC%A2%85%EC%84%B8%ED%8A%B8/364/category/24/display/1/"
+  },
+  {
+    "id": "P4-CATALOG-LINK/products/tip-363",
+    "pass": true,
+    "actual": "https://oneway.or.kr/product/%EC%86%8C%EB%AA%A8%ED%92%88-%EC%9B%90%EC%9B%A8%EC%9D%B4-%EC%B9%98%EC%95%84%EA%B4%80%EB%A6%AC%EA%B8%B0-v1-%EC%B9%AB%EC%86%94%ED%8C%81/363/category/24/display/1/"
+  }
+]

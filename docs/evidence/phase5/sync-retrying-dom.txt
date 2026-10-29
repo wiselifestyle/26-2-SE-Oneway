@@ -1,0 +1,55 @@
+- link "본문으로 건너뛰기":
+  - /url: "#main-content"
+- banner:
+  - button "뒤로가기":
+  - link "Oneway 홈":
+    - /url: /
+    - text: Oneway
+  - link "설정 열기":
+    - /url: /settings
+- main:
+  - generic: DEVICE · 시뮬레이션
+  - heading "기기 관리" [level=1]
+  - paragraph: 시연용 기기의 연결과 기록 동기화를 체험해보세요.
+  - complementary:
+    - strong: 시연용 기기 · 예시 데이터
+    - paragraph: 실제 Bluetooth 연결이나 기기 측정을 수행하지 않습니다. 점수·시간·커버리지는 Mock 예시입니다.
+    - paragraph: 본 정보는 진료·진단을 대체하지 않습니다.
+  - region "기기와 동기화 상태":
+    - strong: 모의 연결됨
+    - paragraph: 마지막 정상 동기화 · 2026. 10. 30. 오전 2:24:16
+    - status: 전송 보류 · 재시도 1/3 · 1초 후
+  - button "모의 동기화 중…" [disabled]
+  - button "동기화 중단"
+  - button "모의 연결 해제"
+  - link "양치 기록 보기":
+    - /url: /brushing
+  - generic "개발자 기기 시나리오"
+  - text: 연결 응답
+  - combobox "연결 시나리오" [disabled]:
+    - option "정상" [selected]
+    - option "모의 권한 거절"
+    - option "시간 초과"
+    - option "연결 불가"
+  - text: 동기화 응답
+  - combobox "동기화 시나리오" [disabled]:
+    - option "정상·중복 이벤트"
+    - option "2회 실패 후 회복"
+    - option "전송 실패" [selected]
+    - option "빈 목록"
+    - option "잘못된 데이터"
+  - complementary:
+    - paragraph: 기록과 상태는 현재 탭의 메모리에만 있습니다. 해제·전송 실패 시 과거 기록은 유지되며, 새로고침하면 초기화됩니다.
+- navigation "주요 메뉴":
+  - link "홈":
+    - /url: /
+    - generic: 홈
+  - link "양치 관리":
+    - /url: /brushing
+    - generic: 양치 관리
+  - link "제품":
+    - /url: /products
+    - generic: 제품
+  - link "설정":
+    - /url: /settings
+    - generic: 설정

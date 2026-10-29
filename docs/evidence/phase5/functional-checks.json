@@ -1,0 +1,180 @@
+[
+  {
+    "id": "P5-RQ01-CONSENT",
+    "requirement": "RQ-01/ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ01-REQUIRED",
+    "requirement": "RQ-01",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ02-RESULT",
+    "requirement": "RQ-02/UI-04",
+    "pass": true,
+    "actual": {
+      "items": 4,
+      "missing": true,
+      "notice": "가상 응답 · 모의 결과\n\n본 정보는 진료·진단을 대체하지 않습니다. 선택지·표시 수준·조언·추천은 프로토타입 체험용이며, 실제 AI 분석이나 전문가 감수를 거친 결과가 아닙니다."
+    },
+    "correction": "고지 문장은 긴 문단 일부여서 exact 전체 문단 일치 대신 실제 고지 문구 포함 여부 검사"
+  },
+  {
+    "id": "P5-RQ03-ADVICE",
+    "requirement": "RQ-03",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ04-TIPS",
+    "requirement": "RQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ09-LINK",
+    "requirement": "RQ-09",
+    "pass": true
+  },
+  {
+    "id": "P5-SUBSCRIPTION-FOCUS-CYCLE",
+    "requirement": "RQ-07/UI-02",
+    "pass": true
+  },
+  {
+    "id": "P5-SUBSCRIPTION-FOCUS-CONSENT",
+    "requirement": "RQ-07/UI-02",
+    "pass": true
+  },
+  {
+    "id": "P5-ORDER-PENDING",
+    "requirement": "ONRQ-03/UI-03",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ07-DEMO",
+    "requirement": "RQ-07/UI-03",
+    "pass": true
+  },
+  {
+    "id": "P5-ORDER-WITHDRAW",
+    "requirement": "ONRQ-03",
+    "pass": true
+  },
+  {
+    "id": "P5-NAV-FOCUS",
+    "requirement": "RQ-08/UI-01",
+    "pass": true
+  },
+  {
+    "id": "P5-DEVICE-DISCONNECTED",
+    "requirement": "RQ-05/ONRQ-01",
+    "pass": true
+  },
+  {
+    "id": "P5-DEVICE-PENDING",
+    "requirement": "UI-03",
+    "pass": true,
+    "actual": "직전 DOM 스냅샷: 모의 연결 시도 중 / disabled 모의 연결 중… / 연결 시도 중단"
+  },
+  {
+    "id": "P5-DEVICE-CONNECTED",
+    "requirement": "UI-03/RQ-05",
+    "pass": true
+  },
+  {
+    "id": "P5-SYNC-DEDUP",
+    "requirement": "RQ-05/ONRQ-01",
+    "pass": true,
+    "actual": "2회 동기화 후 보관 6건 유지"
+  },
+  {
+    "id": "P5-PERIOD",
+    "requirement": "RQ-05",
+    "pass": true
+  },
+  {
+    "id": "P5-DETAIL",
+    "requirement": "RQ-05/UI-04",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-CONTEXT",
+    "requirement": "RQ-06",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-CONSENT-GUARD",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-DECLINE",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-INVALID-unsupported.txt",
+    "requirement": "ONRQ-02",
+    "pass": true,
+    "actual": "MP4 또는 WebM 형식만 지원해요."
+  },
+  {
+    "id": "P5-VIDEO-INVALID-empty.webm",
+    "requirement": "ONRQ-02",
+    "pass": true,
+    "actual": "빈 파일은 선택할 수 없어요. 다른 영상을 선택하세요."
+  },
+  {
+    "id": "P5-VIDEO-INVALID-bad-header.mp4",
+    "requirement": "ONRQ-02",
+    "pass": true,
+    "actual": "형식 헤더를 확인할 수 없어요. 손상되지 않은 시연용 영상을 선택하세요."
+  },
+  {
+    "id": "P5-VIDEO-FILE-RELEASE",
+    "requirement": "ONRQ-04",
+    "pass": true,
+    "actual": "검사 후 파일 입력 value 비움; FileList는 도구 읽기 범위 밖이므로 별도 검사하지 않음"
+  },
+  {
+    "id": "P5-VIDEO-PENDING",
+    "requirement": "UI-03",
+    "pass": true
+  },
+  {
+    "id": "P5-RQ06-VIDEO",
+    "requirement": "RQ-06/UI-03",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-RECORD-INVARIANT",
+    "requirement": "RQ-05/06",
+    "pass": true,
+    "actual": "67"
+  },
+  {
+    "id": "P5-PRIVACY-ALL-TARGETS",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-DELETE-CONFIRM-GUARD",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-DELETE-CANCEL",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-DELETE-ALL-INTEGRATED",
+    "requirement": "ONRQ-04/OP-05",
+    "pass": true
+  },
+  {
+    "id": "P5-HOME-DELETED",
+    "requirement": "RQ-08",
+    "pass": true
+  }
+]
