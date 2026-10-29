@@ -1,0 +1,12 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>ONEWAY 합성 영상 QA</title>
+<body><h1>합성 시연 영상 만들기</h1><p>개인·구강 이미지가 없는 내부 검증용 파일입니다.</p><canvas id="canvas" width="160" height="90"></canvas><button id="generate">시연용 WebM 만들기</button><p id="status" role="status">대기</p>
+<script>
+document.querySelector('#generate').onclick = async () => {
+  const canvas = document.querySelector('#canvas'); const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#2f6bf2'; ctx.fillRect(0,0,160,90); ctx.fillStyle = 'white'; ctx.font='16px sans-serif'; ctx.fillText('ONEWAY DEMO',16,50);
+  const stream = canvas.captureStream(10); const recorder = new MediaRecorder(stream, {mimeType:'video/webm'}); const parts=[];
+  recorder.ondataavailable=e=>parts.push(e.data);
+  recorder.onstop=()=>{stream.getTracks().forEach(track=>track.stop()); const url=URL.createObjectURL(new Blob(parts,{type:'video/webm'})); const a=document.createElement('a'); a.href=url; a.download='oneway-synthetic.webm'; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); document.querySelector('#status').textContent='합성 파일 생성 완료';};
+  recorder.start(); document.querySelector('#status').textContent='합성 영상 생성 중'; setTimeout(()=>recorder.stop(),1000);
+};
+</script></body></html>
