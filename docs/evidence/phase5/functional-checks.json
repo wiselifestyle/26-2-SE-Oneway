@@ -176,5 +176,66 @@
     "id": "P5-HOME-DELETED",
     "requirement": "RQ-08",
     "pass": true
+  },
+  {
+    "id": "P5-ORDER-FAILED",
+    "requirement": "ONRQ-03/UI-03",
+    "pass": true
+  },
+  {
+    "id": "P5-ORDER-UNCONFIRMED",
+    "requirement": "ONRQ-03",
+    "pass": true
+  },
+  {
+    "id": "P5-ORDER-CANCEL",
+    "requirement": "ONRQ-03",
+    "pass": true
+  },
+  {
+    "id": "P5-DELETE-PARTIAL",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-DELETE-RETRY",
+    "requirement": "ONRQ-04",
+    "pass": true
+  },
+  {
+    "id": "P5-VIDEO-failed",
+    "requirement": "ONRQ-02/UI-03",
+    "pass": true,
+    "actual": "모의 분석에 실패했어요\n\n실제 파일의 품질이나 신뢰도를 판정한 것이 아닙니다. 결과를 생성하지 않았어요. 시연용 영상을 바꾸거나 다시 촬영한 입력으로 체험할 수 있어요.\n\n정상 시나리오로 다시 시도"
+  },
+  {
+    "id": "P5-VIDEO-low-quality",
+    "requirement": "ONRQ-02/UI-03",
+    "pass": true,
+    "actual": "저품질 시나리오 · 결과 보류\n\n실제 파일의 품질이나 신뢰도를 판정한 것이 아닙니다. 결과를 생성하지 않았어요. 시연용 영상을 바꾸거나 다시 촬영한 입력으로 체험할 수 있어요.\n\n정상 시나리오로 다시 시도"
+  },
+  {
+    "id": "P5-VIDEO-low-confidence",
+    "requirement": "ONRQ-02/UI-03",
+    "pass": true,
+    "actual": "저신뢰 시나리오 · 결과 보류\n\n실제 파일의 품질이나 신뢰도를 판정한 것이 아닙니다. 결과를 생성하지 않았어요. 시연용 영상을 바꾸거나 다시 촬영한 입력으로 체험할 수 있어요.\n\n정상 시나리오로 다시 시도"
+  },
+  {
+    "id": "P5-DEVICE-ERROR-denied",
+    "requirement": "ONRQ-01/UI-03",
+    "pass": true,
+    "actual": "모의 권한 거절 상태예요. 실제 기기 권한은 요청하지 않았어요."
+  },
+  {
+    "id": "P5-DEVICE-ERROR-timeout",
+    "requirement": "ONRQ-01/UI-03",
+    "pass": true,
+    "actual": "모의 연결 시간이 초과되었어요. 다시 시도하거나 중단하세요."
+  },
+  {
+    "id": "P5-DEVICE-ERROR-unavailable",
+    "requirement": "ONRQ-01/UI-03",
+    "pass": true,
+    "actual": "시연용 기기를 찾지 못했어요. 실제 기기를 검색한 결과는 아닙니다."
   }
 ]

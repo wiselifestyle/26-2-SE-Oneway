@@ -1,6 +1,6 @@
 # Phase 0 검토 및 검증 기록
 
-**최신 상태 (2026-10-30): Phase 4 구현 완료 / Awaiting approval.** 앞부분은 단계별 이력이며 최신 결과/미검증 크기는 아래 Phase 4 절을 따른다.
+**최신 상태 (2026-10-30): Phase 5 완료 / Awaiting approval.** 앞부분은 단계별 이력이며 최신 결과/미검증 크기는 아래 Phase 4 절을 따른다.
 
 일자: 2026-10-30 (Asia/Seoul). 환경: Windows/PowerShell, Codex 번들 Python 3 런타임의 python-docx/pypdf/pypdfium2/Pillow. **문서 검사는 앱 기능 수용 시험이 아니다.** 구현 파일 없음, 실행 수용 시험은 모두 Not tested.
 
@@ -165,3 +165,7 @@ Git 상태 조회는 ‘not a git repository’로 종료되었다. Git diff를 
 증거 화면은 같은 폴더의 product-375x811.jpg, subscription-status-375x811.jpg, order-failed-375x811.jpg, order-unconfirmed-375x811.jpg, delete-partial-1265x712.jpg, delete-complete-1265x712.jpg, products-1265x712.jpg, products-current.jpg다. 파일명 크기는 저장된 JPEG 픽셀 크기이며 CSS viewport를 보장하지 않는다. 초기 화면은 모바일 형태이나 지정 크기 정량 통과 증거로 사용하지 않았다. 검증 탭이 중간에 닫혀 새 탭에서 기록을 다시 생성하고 삭제 검사를 수행했다. 자동화 중 버튼 이름 확인 오류 2건은 실제 UI 상태 확인 후 올바른 대상으로 진행했다.
 
 미검증/미결: 상태별 실제 상품 적합성·기획 맞춤 팁과 판매 상품의 대응, 실제 구독 요금/주기/배송 구성/해지, 가격·재고 동기화·외부 장애 자동 감지, 실거래·계정/서버 삭제, 실기기·임상/전문가 검수·LOS 정량/사용자5명. **모바일 지정 크기 재검증을 다음 단계 첫 순서로 권장**한다. 사용자용 localhost 서버는 유지하며 임시 검증 탭/viewport를 정리했다. **Phase 4 게이트: Awaiting approval. Phase 5: Blocked. 다음 승인 전까지 중단한다.**
+
+## Phase 5 최종 결과
+
+최신 결과는 [FINAL_QA_REPORT](FINAL_QA_REPORT.md)를 따른다. 단위31/31, 타입/빌드 Pass, 브라우저174/174(기능44+배치130), 화면/설문/영상 각30회 프록시 p95 312/697/841ms. Phase4 모바일 미검증 보완. 상세 원시 증거 evidence/phase5. 사용자5명·전문가 감수·실기기/실AI·실거래/서버 삭제는 Not tested. **Awaiting approval**.

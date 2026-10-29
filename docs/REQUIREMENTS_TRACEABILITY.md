@@ -1,6 +1,6 @@
 # 요구사항 추적표
 
-2026-10-30 Phase 4까지 구현. **RQ-07/09, ONRQ-03/04의 로컬 데모·판매 링크를 검증했다. RQ-04 실제 상태별 상품 적합성은 Partial이다.** 실제 제품 적합성·임상·BLE/영상 판독/거래·서버 삭제 수용을 통과로 계산하지 않는다. Phase 4 지정 모바일 크기 재검증은 도구 제약으로 Not tested다.
+2026-10-30 Phase 5 통합 검증 완료. 최신 판정은 마지막 Phase 5 절/FINAL_QA_REPORT를 따른다. **RQ-07/09, ONRQ-03/04의 로컬 데모·판매 링크를 검증했다. RQ-04 실제 상태별 상품 적합성은 Partial이다.** 실제 제품 적합성·임상·BLE/영상 판독/거래·서버 삭제 수용을 통과로 계산하지 않는다. Phase 4 지정 모바일 크기 재검증은 도구 제약으로 Not tested다.
 
 ## 핵심 기능과 예외
 
@@ -95,3 +95,7 @@ P1 검증 ID는 TEST_RESULTS의 Phase 1 표와 연결된다. 원시 브라우저
 | RQ-08/ UI-01/04 | src/pages/HomePage.tsx, src/App.tsx, src/components/MockNotice.tsx, src/styles/app.css | P3-HOME/LAYOUT/KEY/REGRESSION: 홈 기기 요약·Mock 고지·5화면+영상 결과 30개 viewport 조합·키보드·Phase 2 회귀 |
 
 tests/brushing.test.ts 8건, tests/video.test.ts 5건 신규. 기존 8건 포함 단위 21/21. docs/evidence/phase3의 browser-checks.json 81/81, build.log/unit-tests.log/스크린샷/console-check.json이 근거다. UI-03은 기기·영상 분기만 검사했고 주문 분기는 Phase 4에 남는다. LOS 정량/실기기/임상 수용은 여전히 Not tested.
+
+## Phase 5 최종 추적 판정
+
+FINAL_QA_REPORT/evidence/phase5를 최신 근거로 적용한다. RQ01~03/05~08·ONRQ01~04는 Mock/로컬 범위 Pass, RQ09는 판매 링크 범위 Pass(자사몰 도착은 Phase4 증거), RQ04는 후보 분류/탐색 Pass·실제품 적합성 Partial. PR01은 데모 정상/예외 검사 완료이나 실제 적합성 Partial. UI01/02는 130개 배치·키보드/초점 검사 Pass(웹 범위), UI03 9상태 Mock Pass, UI04/LOS06 비진단 고지는 개발 검토했으나 외부 전문가 미검수로 Partial. LOS01은 각30회 프록시 측정만 완료(Partial), LOS04는 ONRQ각3건 이상·총12건 이상 Mock Pass. LOS02/03의 실제 모델·보안/서버 운영, LOS05 사용자5명은 Not tested. HI/CI/SI 실제 외부 연동은 제외이며 Mock 대체 검사만 통과. ER 확장 Deferred. 상단의 Phase4/Planned 표기는 당시 이력으로, 실제품/실서비스 전체 통과를 뜻하지 않는다.

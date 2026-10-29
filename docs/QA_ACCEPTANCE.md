@@ -82,3 +82,7 @@ Phase마다 `docs/TEST_RESULTS.md`를 작성·갱신한다. 결과에는 테스�
 | P4-LAYOUT/KEY | UI-01/02 | 상품/구독/설정 배치·상품 select/주기 radio/확인 checkbox/Enter 제출. 지정 모바일 크기는 실제 innerWidth/innerHeight와 일치할 때만 통과 집계 |
 
 실주문·임상 적합성·현재 가격/재고·서버 삭제·실기기 검증은 제외한다. 실제 결과/미검증 크기는 TEST_RESULTS Phase 4를 따른다.
+
+## Phase 5 최종 판정
+
+FINAL_QA_REPORT 및 evidence/phase5 참조. 실제 CSS 크기5종 배치130/130, 기능44/44, 단위31/31. ONRQ각3개 이상 Mock 예외·UI9상태 확인. 사용자5명·전문가·실서비스 정량 기준은 미검증과 분리한다.

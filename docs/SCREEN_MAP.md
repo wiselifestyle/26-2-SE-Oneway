@@ -148,3 +148,7 @@ S07→S12는 `/video-analysis?session=<demo-id>`로 선택적 문맥을 전달�
 - S01 홈: 구독 처리 중/가상 상태/철회 상태 진입, 삭제 후 미평가/미연결/기록 없음. 요청 완료로 이탈한 화면을 강제로 바꾸지 않는다.
 
 기존 표의 Phase 4 준비 문구는 당시 계획이다. 실제 컴포넌트는 ProductsPage/ProductDetailPage/SalesChannelsPage, SubscriptionPage/SubscriptionStatusPage, SettingsPage/PrivacyPage, ProductCard/ShopLink다. 정상/빈/오류·확인 화면은 기존 밝은 테마 토큰을 적용한다. 모바일 지정 크기 재검증은 도구 제약으로 Not tested이며 TEST_RESULTS 참조.
+
+## Phase 5 통합 검증
+
+전체 진입17개×5크기 및 실제 생성9상태×5크기 검사130건 통과. 라우트/기능 추가 없음. 구독 폼 오류 표시·필수 초점 보완. 기존 Phase4 모바일 Not tested는 당시 기록이며 현 재검증은 FINAL_QA_REPORT를 따른다.
