@@ -134,3 +134,7 @@ Phase 1의 완료는 **앱 셸 검증**이다. RQ-01~09 전체 기능 완료로 
 ## Phase 5 결과
 
 2026-10-30 Phase4 승인 후 Phase5만 수행. 구독 오류 색상·필수 초점/오류 연결·입력 초점 보완. 테스트31/31, 타입/빌드 Pass, 기능44/44+실측 배치130/130. 30회씩 측정 p95 화면312ms/설문697ms/영상841ms(로컬 Mock 프록시). 원본/AGENTS 보존. FINAL_QA_REPORT에 파일·근거·정량 한계·미검증 공개. 사용자5명/전문가/실기기/실AI는 Not tested. Phase4 모바일 공백 재검증 완료. **Phase5 Awaiting approval, 다음 승인 전까지 중단한다.** 추가 Phase/배포 계획은 별도 승인 필요.
+
+## Re-engineering (과제) 결과
+
+2026-11-15 사용자 명시 승인으로 Sonicare 리버스 엔지니어링 기반 개선 C1~C5를 수행했다(`docs/re/`). 신규 의존성 0, 테스트 36/36, 타입 검사 Pass, Before 8장/After 11장 캡처. 320/430px·키보드 재검사와 커밋된 `dist/` 재빌드는 수행하지 않았다. **게이트: Awaiting approval.**

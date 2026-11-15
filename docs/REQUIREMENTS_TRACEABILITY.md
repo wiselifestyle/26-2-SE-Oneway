@@ -99,3 +99,15 @@ tests/brushing.test.ts 8건, tests/video.test.ts 5건 신규. 기존 8건 포함
 ## Phase 5 최종 추적 판정
 
 FINAL_QA_REPORT/evidence/phase5를 최신 근거로 적용한다. RQ01~03/05~08·ONRQ01~04는 Mock/로컬 범위 Pass, RQ09는 판매 링크 범위 Pass(자사몰 도착은 Phase4 증거), RQ04는 후보 분류/탐색 Pass·실제품 적합성 Partial. PR01은 데모 정상/예외 검사 완료이나 실제 적합성 Partial. UI01/02는 130개 배치·키보드/초점 검사 Pass(웹 범위), UI03 9상태 Mock Pass, UI04/LOS06 비진단 고지는 개발 검토했으나 외부 전문가 미검수로 Partial. LOS01은 각30회 프록시 측정만 완료(Partial), LOS04는 ONRQ각3건 이상·총12건 이상 Mock Pass. LOS02/03의 실제 모델·보안/서버 운영, LOS05 사용자5명은 Not tested. HI/CI/SI 실제 외부 연동은 제외이며 Mock 대체 검사만 통과. ER 확장 Deferred. 상단의 Phase4/Planned 표기는 당시 이력으로, 실제품/실서비스 전체 통과를 뜻하지 않는다.
+
+## Re-engineering (Sonicare 참고) 추적
+
+| 요구사항 | 실제 파일 | 검증 및 한계 |
+|---|---|---|
+| RQ-08 (RE-C1) | src/domain/home.ts, src/components/HomeCards.tsx, src/pages/HomePage.tsx | 홈 카드 우선순위·최대 3장 단위 테스트, 390px 캡처. 320/430px 재검사 미수행 |
+| RQ-05 (RE-C2) | src/domain/brushing.ts `brushingStreak`, src/components/BrushingInsights.tsx `StreakCard` | KST 자정 경계·무기록 null·끊김 테스트. 실제 동기 부여 효과 미측정 |
+| RQ-02/05 (RE-C3) | src/domain/brushing.ts `sessionGrade`, BrushingInsights `GradeChip`, BrushingPage/BrushingDetailPage | 경계값(80/79/60/59/null) 테스트. 구간은 데모 가정(D-RE-02) |
+| RQ-04/07 (RE-C4) | src/domain/tipCycle.ts, src/components/TipCycleCard.tsx, RecommendationsPage, brushingService `setTipReplacedOn` | 잘못된·미래 날짜 거부, 70%/100% 경계, reset 삭제 테스트. 주기 90일 데모 가정(D-RE-01) |
+| ONRQ-01/04 (RE-C5) | src/pages/DevicePage.tsx, brushingService `connectionErrorKind` | 실패 유형 보관·해제 시 초기화 테스트, 연결 불가 캡처. 권한 거절/시간 초과 화면은 캡처하지 않음 |
+
+검증: `npm test` 36/36, `npm run typecheck` Pass. 캡처 `docs/re/img/before|after`(390px). 기존 Phase 5 판정은 유지하며, 위 항목은 Mock/로컬 범위 개선이다.

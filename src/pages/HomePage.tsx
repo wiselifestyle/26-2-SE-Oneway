@@ -2,15 +2,12 @@ import { ArrowUpRight, ClipboardList, Link2, ShieldCheck, ShoppingBag, Sparkles,
 import { Link } from 'react-router';
 import { NavigationCard } from '../components/NavigationCard';
 import { useAssessment } from '../state/assessmentStore';
-import { useBrushing } from '../state/brushingStore';
-import { connectionLabels } from '../components/DeviceState';
-import { dateTimeLabel } from '../domain/brushing';
 import { useSubscription } from '../state/subscriptionStore';
+import { HomeCards } from '../components/HomeCards';
 
 export function HomePage() {
   const { result, revision, status } = useAssessment();
   const current = result?.revision === revision ? result : null;
-  const brushing = useBrushing();
   const subscription = useSubscription();
   return (
     <div className="home-page">
@@ -22,6 +19,8 @@ export function HomePage() {
         <Link className="primary-link" to={current ? `/assessment/${current.id}` : '/assessment'}>{current ? '데모 결과 이어보기' : '구강 테스트 시작하기'}<ArrowUpRight size={19} aria-hidden="true" /></Link>
         <span className="hero-decoration" aria-hidden="true"><Smile size={106} strokeWidth={0.8} /></span>
       </section>
+
+      <HomeCards />
 
       <section className="home-section" aria-labelledby="care-title">
         <div className="section-heading"><div><p className="eyebrow">My oral care</p><h2 id="care-title">나의 구강 관리</h2></div><span className="section-caption">맞춤 케어 체험</span></div>
@@ -35,7 +34,6 @@ export function HomePage() {
       <section className="home-summary" aria-label="데모 상태 요약">
         <strong>{status === 'pending' ? '모의 분석 중이에요' : current ? '이번 체험의 결과가 있어요' : status === 'failed' || status === 'low-confidence' ? '데모 결과를 만들지 않았어요' : '아직 구강 테스트 결과가 없어요'}</strong>
         <p>{current ? `${current.items.filter(item => item.position !== null).length}개 항목의 가상 응답 표시 · 새로고침 시 초기화` : '가상 응답으로 테스트를 완료하면 결과를 이어볼 수 있어요.'}</p>
-        <span>기기 상태 · {connectionLabels[brushing.connection]}<br />예시 기록 {brushing.sessions.length}건 · 마지막 정상 동기화 {dateTimeLabel(brushing.lastSync)}</span>
         <Link className="inline-link" to={subscription.intent ? `/subscription/status/${subscription.intent.id}` : '/subscription'}>{subscription.status === 'pending' ? '가상 구독 요청 처리 중' : subscription.intent ? subscription.intent.status === 'demo_withdrawn' ? '철회한 가상 요청 보기' : '가상 구독 요청 상태 보기 · 실제 주문 아님' : '구독 구성 체험하기'}</Link>
       </section>
 

@@ -7,15 +7,16 @@ export interface DeviceAdapter {
   sync(scenario: SyncScenario, attempt: number, signal: AbortSignal): Promise<unknown>;
 }
 export type BrushingState = { connection: 'disconnected' | 'connecting' | 'mock-connected' | 'error'; connectionError: string | null;
+  connectionErrorKind: ConnectionScenario | null;
   syncStatus: 'idle' | 'pending' | 'retrying' | 'success' | 'failed'; syncError: string | null; retry: number; delay: number;
-  sessions: BrushingSession[]; lastSync: string | null; period: Period };
+  sessions: BrushingSession[]; lastSync: string | null; period: Period; tipReplacedOn: string | null };
 export const connectionMessages = {
   denied: '모의 권한 거절 상태예요. 실제 기기 권한은 요청하지 않았어요.', timeout: '모의 연결 시간이 초과되었어요. 다시 시도하거나 중단하세요.',
   unavailable: '시연용 기기를 찾지 못했어요. 실제 기기를 검색한 결과는 아닙니다.',
 };
 
 export function createBrushingService(adapter: DeviceAdapter, now = () => Date.now(), sleep = wait) {
-  let state: BrushingState = { connection: 'disconnected', connectionError: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0, sessions: [], lastSync: null, period: 14 };
+  let state: BrushingState = { connection: 'disconnected', connectionError: null, connectionErrorKind: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0, sessions: [], lastSync: null, period: 14, tipReplacedOn: null };
   let connectionRequest: AbortController | null = null;
   let syncRequest: AbortController | null = null;
   const listeners = new Set<() => void>();
@@ -25,23 +26,25 @@ export function createBrushingService(adapter: DeviceAdapter, now = () => Date.n
     subscribe(listener: () => void) { listeners.add(listener); return () => { listeners.delete(listener); }; },
     reset() {
       connectionRequest?.abort(); syncRequest?.abort(); connectionRequest = null; syncRequest = null;
-      update({ connection: 'disconnected', connectionError: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0, sessions: [], lastSync: null, period: 14 });
+      update({ connection: 'disconnected', connectionError: null, connectionErrorKind: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0, sessions: [], lastSync: null, period: 14, tipReplacedOn: null });
     },
     setPeriod(period: Period) { update({ period }); },
+    // RE-C4: tip replacement date (YYYY-MM-DD, KST), memory only like the rest of this state.
+    setTipReplacedOn(value: string | null) { update({ tipReplacedOn: value || null }); },
     async connect(scenario: ConnectionScenario = 'success') {
       if (state.connection === 'connecting' || state.connection === 'mock-connected') return;
       const request = new AbortController(); connectionRequest = request;
-      update({ connection: 'connecting', connectionError: null });
+      update({ connection: 'connecting', connectionError: null, connectionErrorKind: null });
       try {
         await adapter.connect(scenario, request.signal);
         if (!request.signal.aborted && connectionRequest === request) update({ connection: 'mock-connected' });
       } catch {
-        if (!request.signal.aborted && connectionRequest === request) update({ connection: 'error', connectionError: connectionMessages[scenario as keyof typeof connectionMessages] ?? '모의 연결에 실패했어요. 다시 시도하세요.' });
+        if (!request.signal.aborted && connectionRequest === request) update({ connection: 'error', connectionErrorKind: scenario, connectionError: connectionMessages[scenario as keyof typeof connectionMessages] ?? '모의 연결에 실패했어요. 다시 시도하세요.' });
       }
     },
     disconnect() {
       connectionRequest?.abort(); syncRequest?.abort(); connectionRequest = null; syncRequest = null;
-      update({ connection: 'disconnected', connectionError: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0 });
+      update({ connection: 'disconnected', connectionError: null, connectionErrorKind: null, syncStatus: 'idle', syncError: null, retry: 0, delay: 0 });
     },
     cancelSync() {
       syncRequest?.abort(); syncRequest = null;

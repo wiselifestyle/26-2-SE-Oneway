@@ -5,6 +5,7 @@ import { DemoNotice } from '../components/DemoNotice';
 import { StateNotice } from '../components/StateNotice';
 import { catalog } from '../domain/catalog';
 import { ProductCard } from '../components/ProductCard';
+import { TipCycleCard } from '../components/TipCycleCard';
 
 export function RecommendationsPage() {
   const state = useAssessment();
@@ -14,6 +15,7 @@ export function RecommendationsPage() {
     <div className="page-eyebrow">CURATION · 추천 흐름 데모</div><h1>교체용 팁 4종</h1>
     <p className="page-description">원안의 4종 팁 개념을 임시 후보 A~D로 구분했어요. 명칭·사양·호환성·제품별 효능은 미확정입니다.</p>
     <DemoNotice />
+    <TipCycleCard />
     {!result ? <StateNotice kind="empty" title="추천할 결과가 없어요" description="테스트를 완료하면 가상 응답에 연결된 데모 후보를 볼 수 있어요. 이전 결과가 무효화되면 추천도 보류됩니다." /> : result.adviceStatus === 'failed' ? <StateNotice kind="error" title="맞춤 추천을 보류했어요" description="조언 조회에 실패해 개별 후보를 추천하지 않았어요. 결과에서 다시 요청할 수 있어요." /> : candidates.length === 0 ? <StateNotice kind="empty" title="맞춤 추천을 하지 않았어요" description="불편감 선택이 없거나 평가 가능한 항목이 없어요. 아래에서 일반 팁 개념만 확인하세요." /> : <section className="candidate-list" aria-label="데모 추천 후보">
       <h2>가상 응답으로 분류한 후보</h2>
       {candidates.map(candidate => <article className="candidate-card" key={candidate.candidate}><span className="candidate-mark" aria-hidden="true">{candidate.candidate}</span><div><h3>데모 후보 {candidate.candidate}</h3><p>{candidate.reason}</p><Link className="inline-link" to="/products">자사몰 상품과 기기 모델 확인</Link></div></article>)}
